@@ -5,7 +5,7 @@ import javax.annotation.PreDestroy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 //@Scope("prototype")
 public class Dog implements Pet {
 //    private String name;
@@ -20,15 +20,15 @@ public class Dog implements Pet {
 
     }
 
-    @PostConstruct
-    public void init() {
-        System.out.println("Class Dog: init method");
-    }
-
-    @PreDestroy
-    public void destroy() {
-        System.out.println("Class Dog: destroy method");
-    }
+//    @PostConstruct
+//    public void init() {
+//        System.out.println("Class Dog: init method");
+//    }
+//
+//    @PreDestroy
+//    public void destroy() {
+//        System.out.println("Class Dog: destroy method");
+//    }
 //
 //    public String getName() {
 //        return name;
