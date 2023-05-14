@@ -11,21 +11,16 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  *
  * @author marat
  */
-public class Test2 {
+public class Test3 {
 
     public static void main(String[] args) {
+        System.out.println("Methods main starts");
         AnnotationConfigApplicationContext context
                 = new AnnotationConfigApplicationContext(MyConfig.class);
-        University university = context.getBean("university", University.class);
-        university.addStudents();
-        try {
-            List<Student> students = university.getStudents();
-            System.out.println(students);
-
-        } catch (Exception e) {
-            System.out.println("Было поймано исключение " + e);
-        }
-
+        UniLibrary uniLibrary = context.getBean("uniLibrary", UniLibrary.class);
+        String bookName = uniLibrary.returnBook();
+        System.out.println("В библиотеку вернули книгу " + bookName);
         context.close();
+        System.out.println("Methods main ends");
     }
 }
